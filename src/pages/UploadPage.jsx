@@ -62,6 +62,12 @@ function UploadPage() {
           <button onClick={isEditing ? handleSave : toggleEdit}>
             {isEditing ? "Save" : "Edit"}
           </button>
+          <button
+            onClick={() => navigate("/export")}
+            style={{ marginLeft: "10px" }}
+          >
+            export
+          </button>
         </div>
       )}
     </div>

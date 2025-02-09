@@ -5,6 +5,12 @@ function SummaryPage() {
     <div>
       <h2>AI Summary</h2>
       <p>{summary}</p>
+      <button
+        onClick={() => navigate("/export")}
+        style={{ marginLeft: "10px" }}
+      >
+        export
+      </button>
       <button onClick={() => navigator.clipboard.writeText(summary)}>
         Copy to Clipboard
       </button>
