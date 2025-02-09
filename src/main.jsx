@@ -1,16 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import App from "./App";
-import UploadPage from "./pages/UploadPage";
-import SummaryPage from "./pages/SummaryPage";
+import { RouterProvider } from 'react-router-dom';
+import { router } from './lib/router';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/upload" element={<UploadPage />} />
-      <Route path="/summary" element={<SummaryPage />} />
-    </Routes>
-  </Router>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
+
+
